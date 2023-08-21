@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Setting the viewport for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keith_Melton_Agbohlah_6044530_Assessment Task 3</title>
+    <style>
+        /* Styling for the body of the document */
+        body {
+            font-family: 'Arial', sans-serif; /* Setting the font to Arial */
+            background-color: #fafafa;       /* Setting the background color */
+            margin: 40px;                     /* Adding margin to the body */
+        }
+
+        /* Styling for the information box */
+        .info-box {
+            border: 2px solid #555;          /* Setting the border */
+            padding: 20px;                   /* Adding padding */
+            background-color: #FF1F3F;       /* Setting the background color */
+            border-radius: 5px;              /* Adding border radius */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding a box shadow */
+        }
+
+        /* General styling for header elements */
+        h1, h2, h3, h4 {
+            padding: 10px;                   /* Adding padding */
+            color: #555;                     /* Setting the text color */
+        }
+
+        /* Styling for the h1 header */
+        h1 {
+            margin-top: 0;                   /* Removing the top margin */
+            background-color: #ffcccc;       /* Setting the background color */
+        }
+
+        /* Styling for the h2 header */
+        h2 {
+            background-color: #ccffcc;       /* Setting the background color */
+        }
+
+        /* Styling for the h3 and h4 headers */
+        h3, h4 {
+            margin-bottom: 0;                /* Removing the bottom margin */
+        }
+
+        /* Styling for the h3 header */
+        h3 {
+            background-color: #ccccff;       /* Setting the background color */
+        }
+
+        /* Styling for activity and web attack tables */
+        .activity-table, .webattack-table {
+            width: 90%;                      /* Setting the width */
+            max-width: 1000px;               /* Setting the maximum width */
+            border-collapse: collapse;       /* Collapsing the border */
+            margin: 20px auto;               /* Setting the margin */
+            border: 1px solid lightgrey;     /* Setting the border */
+        }
+
+        .activity-table th, .activity-table td, .webattack-table th, .webattack-table td {
+            padding: 10px;
+            border-right: 1px solid lightgrey;
+            border-bottom: 1px solid lightgrey;
+        }
+        /* Styling for headers and cells in both activity and web attack tables */
+        .activity-table th, .activity-table td, .webattack-table th, .webattack-table td {
+            padding: 10px;                           /* Padding inside each table cell */
+            border-right: 1px solid lightgrey;      /* Border to the right of each cell */
+            border-bottom: 1px solid lightgrey;     /* Border below each cell */
+        }
+
+        /* Removing the right border for the last cell in each row for both tables */
+        .activity-table th:last-child, .activity-table td:last-child, .webattack-table th:last-child, .webattack-table td:last-child {
+            border-right: none;
+        }
+
+        /* Styling headers in the activity table */
+        .activity-table th {
+            background-color: darkblue;             /* Background color for headers */
+            color: white;                           /* Text color for headers */
+        }
+
+        /* Styling cells in the activity table */
+        .activity-table td {
+            color: darkblue;                        /* Text color for cells */
+        }
+
+        /* Styling headers in the web attack table */
+        .webattack-table th {
+            background-color: darkred;              /* Background color for headers */
+            color: white;                           /* Text color for headers */
+        }
+
+        /* Styling cells in the web attack table */
+        .webattack-table td {
+            color: darkgreen;                       /* Text color for cells */
+        }
+
+        /* Styling for rows with a white background color */
+        .white-row td {
+            background-color: white;
+        }
+
+        /* Styling for rows with a light grey background color */
+        .grey-row td {
+            background-color: lightgrey;
+        }
+
+        /* Styling for unordered lists with square bullets */
+        ul.square-bullets {
+            list-style-type: square;                /* Specifies the type of list-item marker */
+        }
+
+        /* Styling for rows with a light coral background color */
+        .red-row td {
+            background-color: lightcoral;
+        }
+
+        /* Styling for rows with a light yellow background color */
+        .yellow-row td {
+            background-color: lightyellow;
+        }
+    </style>
+
+    <script>
+        // Function to display cat-related message in the input field
+        function cat() {
+            var displayField = document.getElementById("display");
+            displayField.value = "The Cat Button is clicked";
+        }
+
+        // Function to display dog-related message in the input field
+        function dog() {
+            var displayField = document.getElementById("display");
+            displayField.value = "The Dog Button is clicked";
+        }
+
+        // Function to display frog-related message in the input field
+        function frog() {
+            var displayField = document.getElementById("display");
+            displayField.value = "The Frog Button is clicked";
+        }
+
+        // Function to display cat image 
+        function displayCat() {
+            var imageElement = document.getElementById("animalImage");
+            imageElement.src = "cat.jpg";
+        }
+
+        // Function to display dog image
+        function displayDog() {
+            var imageElement = document.getElementById("animalImage");
+            imageElement.src = "dog.jpg";
+        }
+
+        // Function to display frog image
+        function displayFrog() {
+            var imageElement = document.getElementById("animalImage");
+            imageElement.src = "frog.jpg";
+        }
+
+        // Function to combine cat-related functions: show message and display image
+        function combinedCatAction() {
+            cat();
+            displayCat();
+        }
+
+        // Function to combine dog-related functions: show message and display image
+        function combinedDogAction() {
+            dog();
+            displayDog();
+        }
+
+        // Function to combine frog-related functions: show message and display image
+        function combinedFrogAction() {
+            frog();
+            displayFrog();
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Heading for Task 1 -->
+    <h4>Task 1: Use CSS to display the following information</h4>
+    <br>
+    <br>
+    
+    <!-- Container for student, subject, and assignment information -->
+    <div class="info-box">
+        <!-- Displaying student number and full name -->
+        <h1>Student Number: 604453 | Full Name: Keith Melton-Agbohlah</h1>
+        
+        <!-- Displaying subject code and subject title -->
+        <h2>Subject Code: COMP804 | Subject Title: OMP804 (UO323) Web Security </h2>
+        
+        <!-- Displaying assignment number and due date -->
+        <h3>Assignment Number: 1 | Due Date: 21st August 2023</h3>
+    </div>
+    <br>
+    <br>
+    <br>
+<h4>Task 2: Use CSS to style a table</h4>
+<br>
+
+<!-- Task 2 Table containing activity and dates -->
+<table class="activity-table">
+    <thead> <!-- Table heading section -->
+        <tr>
+            <!-- table Headers -->
+            <th>Activity</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody> <!-- Table body section -->
+        <!-- Row 1 -->
+        <tr class="white-row">
+            <td>First day to enrol for re-enrolling (continuing students)</td>
+            <td>21 Nov 2022</td>
+        </tr>
+        
+        <!-- Row 2 -->
+        <tr class="grey-row">
+            <td>Orientation for new students (Sydney)</td>
+            <td>14 Aug 2023</td>
+        </tr>
+        
+        <!-- Row 3 -->
+        <tr class="white-row">
+            <td>Lectures commence (weeks 1 - 10)</td>
+            <td>21 Aug - 27 Oct 2023</td>
+        </tr>
+        
+        <!-- Row 4 -->
+        <tr class="grey-row">
+            <td>Last day to enrol / add subjects yourself</td>
+            <td>08 Sep 2023</td>
+        </tr>
+        
+        <!-- Row 5 -->
+        <tr class="white-row">
+            <td>Last day to enrol / add subjects with Head of Students approval</td>
+            <td>08 Sep 2023</td>
+        </tr>
+        
+        <!-- Row 6 -->
+        <tr class="grey-row">
+            <td>
+                <b>CENSUS DATE</b>
+                <!-- List of actions/details about the census date -->
+                <ul class="square-bullets">
+                    <li>Fees due</li>
+                    <li>Last day to withdraw from subject/s without paying for them</li>
+                    <li>HECS / FEE HELP debt reporting date</li>
+                    <li>Last day to change HECS / FEE HELP billing option</li>
+                </ul>
+                <br>
+                <br>
+                <!-- Link to learn more about Census date -->
+                <a href="https://uowedu.service-now.com/kb?id=kb_article_view&sysparm_article=KB0012659">Learn more about Census date ></a>
+            </td>
+            <td>11 Sep 2023</td>
+        </tr>
+        
+        <!-- Row 7 -->
+        <tr class="white-row">
+            <td>Student Services and Amenities Fees Due</td>
+            <td>12 Sep 2023</td>
+        </tr>
+        
+        <!-- Row 8 -->
+        <tr class="grey-row">
+            <td>Last day to withdraw without academic penalty - subject deleted from record Fail grade recorded if subject withdrawn after this date</td>
+            <td>29 Sep 2023</td>
+        </tr>
+        
+        <!-- Row 9 -->
+        <tr class="white-row">
+            <td>Lectures Commence (weeks 1-10)</td>
+            <td>21 Aug - 27 Oct 2023</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<h4>Task 3: HTML & CSS</h4>
+<br>
+<br>
+
+<!-- Task 3 Table containing details about web attacks -->
+<table class="webattack-table">
+    <thead> <!-- Table heading section -->
+        <tr>
+            <th>Name</th>
+            <th>Web Attacks</th>
+        </tr>
+    </thead>
+    <tbody> <!-- Table body section -->
+        <!-- Row for Attack1 with yellow background -->
+        <tr class="yellow-row">
+            <td>
+                <!-- Attack 1 name and associated image -->
+                Cross-Site Scripting<br>
+                <img src="image1.jpg" alt="Cross-Site Scripting" style="width: 100px; height: 100px; object-fit: cover;">
+            </td>
+            <td>
+                <!-- Description and defense measures for Attack1 -->
+Cross-site scripting (XSS) attacks trick a browser into delivering malicious client-side scripts to the victim’s browser, which will automatically execute it once received. This malware can exfiltrate data, install malware, or redirect the user to a spoofed site. - 
+
+                <!-- Link to read more about Attack1 -->
+                <a href="https://owasp.org/www-community/attacks/xss/" target="_blank">Read more -  https://owasp.org/www-community/attacks/xss/</a>
+            </td>
+        </tr>
+        <!-- Row for Attack1 with red background (Note: This seems to be a repeat of the above row, consider updating the attack name and information) -->
+        <tr class="red-row">
+            <td>
+                <!-- Attack 2 name and associated image -->
+                SQL Injection Attacks<br>
+                <img src="image2.jpg" alt="SQL Injection Attacks" style="width: 100px; height: 100px; object-fit: cover;">
+            </td>
+            <td>
+                <!-- Description and defense measures for Attack2 -->
+                SQL injection attacks are one of the most successful online ploys of the past ten years, and allow attackers to compromise a server’s cookies, web forms, or HTTP posts in order to manipulate data out of the database. They exploit input fields (like those you’d see in an online form) and inject malicious script designed to trick the server into providing unauthorized (and yet not protected) sensitive database information. Preventing against SQL injection attacks requires the same stringency for data input, and a limited set of functions permissible through SQL commands.
+                <!-- Link to read more about Attack2 -->
+                <a href="https://spanning.com/blog/sql-injection-attacks-web-based-application-security-part-4/" target="_blank">Read more - https://spanning.com/blog/sql-injection-attacks-web-based-application-security-part-4/</a>
+            </td>
+        </tr>
+        <!-- Row for Attack3 with yellow background -->
+        <tr class="yellow-row">
+            <td>
+                <!-- Attack 3 name and associated image -->
+                Broken Authentication<br>
+                <img src="image3.jpg" alt="Broken Authentication" style="width: 100px; height: 100px; object-fit: cover;">
+            </td>
+            <td>
+                <!-- Description and defense measures for Attack3 -->
+                Broken authentication – or any sort of illegitimate login-based access – can be executed in a number of ways: brute force, credential stuffing, dictionary attacks, and more. Preventing broken authentication attacks can be as easy as making a super-secure password, or as reliable as switching to tokenized Multi-Factor Authentication (MFA).
+                <!-- Link to read more about Attack3 -->
+                <a href="https://www.prplbx.com/resources/blog/broken-authentication/" target="_blank">Read more - https://www.prplbx.com/resources/blog/broken-authentication/</a>
+            </td>
+        </tr>
+        <tr class="red-row">
+            <td>
+                <!-- Attack 4 name and associated image -->
+                SDrive-by download<br>
+                <img src="image4.jpg" alt="Drive-by download" style="width: 100px; height: 100px; object-fit: cover;">
+            </td>
+            <td>
+                <!-- Description and defense measures for Attack4 -->
+                Drive-by downloads occur when a user visits a website and a malicious agent downloads onto the victim’s computer automatically. It can happen when the user is downloading something else or upon opening an email, clicking a pop-up window, or merely visiting a page. Since drive-by attacks take advantage of latent security vulnerabilities in apps, browsers, and operating systems, it’s important to keep your environment up to date. Limiting the number of web plug-ins and applications you install also reduces your attack surface.
+                <!-- Link to read more about Attack4 -->
+                <a href="https://www.everydaycyber.net/what-is-a-drive-by-download/" target="_blank">Read more - https://www.everydaycyber.net/what-is-a-drive-by-download/</a>
+            </td>
+        </tr>
+
+        <!-- Row for Attack5 with yellow background -->
+        <tr class="yellow-row">
+            <td>
+                <!-- Attack 5 name and associated image -->
+                Brute force Password-based attacks<br>
+                <img src="image5.jpg" alt="Brute force Password-based attacks" style="width: 100px; height: 100px; object-fit: cover;">
+            </td>
+            <td>
+                <!-- Description and defense measures for Attack5 -->
+                Brute force Password-based attacks (systematically guessing at the correct password). Implementing code signing, enforcing strong password requirements, setting up MFA, and operating on the principle of least privilege will reduce the chance of password-based attacks.
+                <!-- Link to read more about Attack5 -->
+                <a href="https://www.fortinet.com/resources/cyberglossary/brute-force-attack" target="_blank">Read more - https://www.fortinet.com/resources/cyberglossary/brute-force-attack</a>
+            </td>
+        </tr>
+        <tr class="red-row">
+            <td>
+                <!-- Attack 6 name and associated image -->
+                Fuzzing<br>
+                <img src="image6.jpg" alt="Fuzzing" style="width: 100px; height: 100px; object-fit: cover;">
+            </td>
+            <td>
+                <!-- Description and defense measures for Attack6 -->
+                Fuzz testing works by initially inputting a large amount of random data (fuzz) into an application to get it to crash. The next step is using a fuzzer software tool to identify the weak spots. If there are any loopholes in the target's security, the attacker can further exploit it. The best way to combat a fuzzing attack is by keeping your security and other applications updated. This is especially true for any security patches that come out with an update that the perpetrators can exploit if you haven’t made the update yet.
+                <!-- Link to read more about Attack6 -->
+                <a href="https://securityboulevard.com/2022/01/what-is-fuzz-testing-what-is-it-used-to-test-for/" target="_blank">Read more - https://securityboulevard.com/2022/01/what-is-fuzz-testing-what-is-it-used-to-test-for/</a>
+            </td>
+        </tr>
+
+        <!-- Row for Attack7 with yellow background -->
+        <tr class="yellow-row">
+            <td>
+                <!-- Attack 7 name and associated image -->
+                Using components with known vulnerabilities<br>
+                <img src="image7.jpg" alt="Using components with known vulnerabilities" style="width: 100px; height: 100px; object-fit: cover;">
+            </td>
+            <td>
+                <!-- Description and defense measures for Attack7 -->
+                a vulnerability or exploit hidden in a downstream dependency, or left over from an Open-Source code repository, could lead to compromise in the final site. Many companies are vetting their third-party suppliers for security compliance prior to partnering to avoid this scenario, and leaning on code signing, quality control policies, and internal threat detection to prevent (or protect against) vulnerable dependencies that slip through.
+                <!-- Link to read more about Attack7 -->
+                <a href="https://www.securecodewarrior.com/article/coders-conquer-security-share-learn-series-using-components-with-known-vulnerabilities" target="_blank">Read more - https://www.securecodewarrior.com/article/coders-conquer-security-share-learn-series-using-components-with-known-vulnerabilities</a>
+            </td>
+        </tr>
+        <tr class="red-row">
+            <td>
+                <!-- Attack 8 name and associated image -->
+                DDoS (Distributed Denial-of-Service)<br>
+                <img src="image8.jpg" alt="DDoS (Distributed Denial-of-Service)" style="width: 100px; height: 100px; object-fit: cover;">
+            </td>
+            <td>
+                <!-- Description and defense measures for Attack8 -->
+                The DDoS attack aims to overwhelm the target’s web server with requests, making the site unavailable for other visitors. A botnet usually creates a vast number of requests, which is distributed among previously infected computers. Also, DDoS attacks are often used together with other methods; the former’s goal is to distract the security systems while exploiting a vulnerability. Protecting your site against a DDoS attack is generally multi-faceted. First, you need to mitigate the peaked traffic by using a Content Delivery Network (CDN), a load balancer and scalable resources. Secondly, you also need to deploy a Web Application Firewall in case the DDoS attack is concealing another cyberattack method, such as an injection or XSS.
+                <!-- Link to read more about Attack8 -->
+                <a href="https://www.cloudflare.com/en-gb/learning/ddos/what-is-a-ddos-attack/" target="_blank">Read more - https://www.cloudflare.com/en-gb/learning/ddos/what-is-a-ddos-attack/</a>
+            </td>
+        </tr>
+
+
+        <!-- Row for Attack9 with yellow background -->
+        <tr class="yellow-row">
+            <td>
+                <!-- Attack 9 name and associated image -->
+                MiTM (Man-in-the-Middle)<br>
+                <img src="image9.jpg" alt="MiTM (Man-in-the-Middle)"style="width: 100px; height: 100px; object-fit: cover;">
+            </td>
+            <td>
+                <!-- Description and defense measures for Attack9 -->
+                Man-in-the-middle attacks are common among sites that haven’t encrypted their data as it travels from the user to the servers (sites using HTTP instead of HTTPS). The perpetrator intercepts the data as it’s being transferred between two parties. If the data isn’t encrypted, the attacker can easily read personal, login or other sensitive details that travel between two locations on the Internet. A straightforward way to mitigate the man-in-the-middle attack is to install a Secure Sockets Layer (SSL) certificate on your site. This certificate encrypts all the information that travels between parties, so the attacker won’t easily make sense of it. Typically, most modern hosting providers already feature an SSL certificate with their hosting package.
+                <!-- Link to read more about Attack9 -->
+                <a href="https://www.kaspersky.com/blog/man-in-the-middle-attack/1613/" target="_blank">Read more - https://www.kaspersky.com/blog/man-in-the-middle-attack/1613/</a>
+            </td>
+        </tr>
+        <tr class="red-row">
+            <td>
+                <!-- Attack 10 name and associated image -->
+                Directory Traversal<br>
+                <img src="image10.jpg" alt="Directory Traversal" style="width: 100px; height: 100px; object-fit: cover;">
+            </td>
+            <td>
+                <!-- Description and defense measures for Attack10 -->
+                Directory (or Path) Traversal attacks target the web root folder to access unauthorized files or directories outside of the targeted folder. The attacker tries to inject movement patterns within the server directory to move up in the hierarchy. A successful path traversal can compromise the site’s access, configuration files, databases, and other websites and files on the same physical server. Protecting your site against a path traversal attack comes down to your input sanitization. This means keeping the user’s inputs safe and unrecoverable from your server. The most straightforward suggestion here is to build your codebase so that any information from a user isn’t passing to the filesystem APIs
+                <!-- Link to read more about Attack10 -->
+                <a href="https://portswigger.net/web-security/file-path-traversal" target="_blank">Read more - https://portswigger.net/web-security/file-path-traversal</a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+<br>
+Reference - The 10 Most Common Website Security Attacks (and How to Protect Yourself)
+<br>
+Posted on February 27, 2023 
+<br>
+<a href="https://www.tripwire.com/state-of-security/most-common-website-security-attacks-and-how-to-protect-yourself" target="_blank">Read more - https://www.tripwire.com/state-of-security/most-common-website-security-attacks-and-how-to-protect-yourself</a>
+<br>
+<br>
+
+<h4>Task 4: Javascript with button</h4>
+<br>
+<br>
+
+<!-- Buttons that call JavaScript functions to display animal info and image -->
+<button onClick="combinedCatAction()">Cat</button>
+<button onClick="combinedDogAction()">Dog</button> 
+<button onClick="combinedFrogAction()">Frog</button> 
+
+<br><br>
+
+<!-- Text input to display which animal button was clicked -->
+<input id="display" type="text" value="">
+
+<br><br>
+
+<!-- Image element to display the selected animal's image -->
+<img id="animalImage" width="300" /> 
+
+<br>
+<br>
+
+
+    <h4>Task 5: Github repository</h4>
+    <br>
+<img src="git1.jpg" alt="git1.jpg" style="width: 400px; height: 400px; object-fit: cover;">
+<br>
+<img src="git2.jpg" alt="git2.jpg" style="width: 400px; height: 400px; object-fit: cover;">
+         
+</body>
+</html>
